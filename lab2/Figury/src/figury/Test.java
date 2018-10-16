@@ -3,8 +3,10 @@ package figury;
 import java.util.*;
 
 public class Test {
+    
+    static LinkedList<Prostokat> figury = new LinkedList<>();
+    
     public static void main(String[] arguments) {
-        LinkedList<Prostokat> figury = new LinkedList<>();
         System.out.println("MENU");
         System.out.println("----------------------");
         System.out.println("1. Wczytaj prostokat");
