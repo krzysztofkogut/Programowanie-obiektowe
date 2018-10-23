@@ -4,6 +4,7 @@
 *.properties
 *.mf
 build
+.idea
 
 
 /lab2/Figury/nbproject/private/
