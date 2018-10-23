@@ -122,8 +122,6 @@ public class EmailMessage {
     }
 
     public void send() throws AddressException, MessagingException {
-
-        //mailSession.setDebug(true);
         
         serverProperties = System.getProperties();
         serverProperties.put("mail.smtp.port", "587");

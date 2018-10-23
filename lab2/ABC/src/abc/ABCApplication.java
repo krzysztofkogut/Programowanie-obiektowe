@@ -8,8 +8,7 @@ public class ABCApplication {
         C c = new C();
 
         c.callChangeName("Kris");
-        b.callIncrement();
-        
+        c.callIncrement();       
     }
     
 }
