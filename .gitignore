@@ -3,7 +3,10 @@
 *.idea
 *.properties
 *.mf
+*.txt
 build
+nbproject
+test
 .idea
 
 
@@ -11,3 +14,6 @@ build
 /lab2/ABC/nbproject/private/
 /lab3/Zad1/nbproject/private/
 /lab3/EmailMessage/nbproject/private/
+/lab4/Cryptographer/nbproject/private/
+/lab5/PhotoSort/nbproject/private/
+/lab5/MicroDVD/nbproject/private/
