@@ -30,7 +30,6 @@ public class TicTacToeClient {
     private BufferedReader in;
     private PrintWriter out;
 
-    // Constructs the client by connecting to a server, laying out the GUI and registering GUI listeners.
   
     public TicTacToeClient(String serverAddress) throws Exception {
 
@@ -59,13 +58,7 @@ public class TicTacToeClient {
         frame.getContentPane().add(boardPanel, "Center");
     }
 
-   //* The main thread of the client will listen for messages from the server.  
-   //The first message will be a "WELCOME" message in which we receive our mark.  
-   //Then we go into a loop listening for: 
-   //--> "VALID_MOVE", --> "OPPONENT_MOVED", --> "VICTORY", --> "DEFEAT", --> "TIE", --> "OPPONENT_QUIT, --> "MESSAGE" messages, and handling each message appropriately.
-   //The "VICTORY","DEFEAT" and "TIE" ask the user whether or not to play another game. 
-   //If the answer is no, the loop is exited and the server is sent a "QUIT" message.  If an OPPONENT_QUIT message is recevied then the loop will exit and the server will be sent a "QUIT" message also.
-    public void play() throws Exception {
+       public void play() throws Exception {
         String response;
         try {
             response = in.readLine();
@@ -114,8 +107,7 @@ public class TicTacToeClient {
         frame.dispose();
         return response == JOptionPane.YES_OPTION;
     }
-
-    //Graphical square in the client window.  
+ 
     static class Square extends JPanel {
         JLabel label = new JLabel((Icon)null);
 
@@ -130,13 +122,12 @@ public class TicTacToeClient {
     }
 
     
-    //main
     public static void main(String[] args) throws Exception {
         while (true) {
             String serverAddress = (args.length == 0) ? "localhost" : args[1];
             TicTacToeClient client = new TicTacToeClient(serverAddress);
             client.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            client.frame.setSize(240, 160);
+            client.frame.setSize(300, 300);
             client.frame.setVisible(true);
             client.frame.setResizable(false);
             client.play();
